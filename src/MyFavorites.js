@@ -52,13 +52,13 @@ showfun=async (idx)=>{
 }
 
 updatefun =async(event)=>{
-  event.preventdefault();
+  event.preventDefault()
   const index=this.state.index
 
   const email=this.state.userEmail
   const obj={
     title:event.target.title.value,
-      imageUrl:event.target.title.imageUrl,
+      imageUrl:event.target.imageUrl.value,
 
   }
   let result=await axios.put(`${process.env.REACT_APP_SERVER}/updateFun/${index}?email=${email}`,obj)
@@ -82,12 +82,19 @@ updatefun =async(event)=>{
 
        />
        {this.state.show &&
-       <FormUpdate
-       title={this.state.title}
-       imageUrl={this.state.imageUrl}
-       updatefun={this.updatefun}
-       />
-       }
+      //  <FormUpdate
+      //  title={this.state.title}
+      //  imageUrl={this.state.imageUrl}
+      //  updatefun={this.updatefun}
+      //  />
+       
+
+
+<form onSubmit={this.updatefun} >
+                    <input type="text" name="title"defaultValue={this.state.title}/>
+                    <input type="text" name="imageUrl"defaultValue={this.state.imageUrl}/>
+                    <input type="submit" value="Update"/>
+                </form>}
       </>
     )
   }

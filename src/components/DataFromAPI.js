@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
             <div>
                  {this.props.colorFav.map((item,idx)=>{
           return(
-            <Card style={{ width: '18rem' , display:"inlin-block"}}>
+            <Card style={{ width: '18rem' , display:"inline-block"}}>
             <Card.Img variant="top" src={item.imageUrl} />
             <Card.Body>
               <Card.Title>{item.title}</Card.Title>

@@ -7,7 +7,7 @@ import {Card,Button} from 'react-bootstrap/'
             <div>
               {this.props.DataAPI.map((item, index) => {
                     return (
-                        <Card style={{ width: '18rem' }}>
+                        <Card style={{ width: '18rem' ,display:"inline-block"}}>
                             <Card.Img variant="top" src={item.imageUrl} />
                             <Card.Body>
                                 <Card.Title>{item.title}</Card.Title>
