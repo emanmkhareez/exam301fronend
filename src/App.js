@@ -32,7 +32,7 @@ class App extends React.Component {
               <Route path="/getAPIData">
                 <AllDataAPI/>
               </Route>
-              
+         
             </Switch>
             <Footer />
         </Router>
